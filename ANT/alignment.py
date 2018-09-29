@@ -3,7 +3,7 @@ import os
 import json
 def getpara():
     try:
-    	with open(input("The path of the json file:"),'r') as json_file:
+    	with open(input("The path of the align json file:"),'r') as json_file:
     		print("json file read in correctly")
     except IOError as err:
     	print("File Error:"+str(err))
