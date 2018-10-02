@@ -5,4 +5,5 @@ This repository is designed to demonstrate ANT, an algorithm that transforms the
 
 Getting started
 ----------
-#Main idea
+# Data source
+The data used for demonstration came from [here](https://www.ncbi.nlm.nih.gov/pubmed/29024657).
