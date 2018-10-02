@@ -1,3 +1,4 @@
-ANT(Alignment-Narrowed TCC-Matrix) <div align=right><img width="90" height="60" src="https://github.com/KevinBastianYang/ANT/blob/master/Logo3.jpg"/><div/>
+ANT(Alignment-Narrowed TCC-Matrix)
 =======
+This repository is designed to designed ANT, an algorithm that transforms the genome alignment results to build TCC-matrix, to faciliate the single-cell RNA-seq quantification. Currently the supported Single-cell protocol is drop-seq.
 
