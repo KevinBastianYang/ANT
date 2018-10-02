@@ -24,6 +24,7 @@ def process(file):
 
 
     # transcript from bam to sam
+    ##### potential bug: \n not ruled out 
     file_fastq_content = "zcat -c /home/yangjc/summer_proj/allcells/E31_TCC/cell_" + cell_number[
         file[-12:]] + '_' + file[-12:] + ".fastq.gz|grep '@'"
     fastq = commands.getoutput(file_fastq_content).split()
@@ -120,6 +121,10 @@ def process(file):
                     else:
                         intersection = list(set(l_set[0]).intersection(*l_set[1:]))
                         reads = l_set
+
+            ####bugging:
+            output_set = list(set(output_set))
+
 
             output_set.sort()
 

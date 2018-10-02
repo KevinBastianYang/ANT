@@ -3,9 +3,9 @@
     "STAR_OUT_PATH": "/home/yangjc/summer_proj/github_test/STAR_out/",
     "CELL_LIST":"/home/yangjc/summer_proj/allcells/E31_TCC/new_umi_read_list.txt",
     "TRANS_ID":"/home/yangjc/summer_proj/stage4/neo_id.txt",
-    "kallisto":{
-        "binary": "/home/yangjc/summer_proj/kallisto_linux-v0.44.0/kallisto",
-        "index": "/home/yangjc/summer_proj/sm_test/scRNA-Seq-TCC-prep/working_dir/transcripts.idx",
-        "TCC_output" : "/home/yangjc/summer_proj/sm_test/scRNA-Seq-TCC-prep/working_dir/out_put/TCC_output/"
+    "THREADS": 8,
+    "OUTPUT_PATH":{
+        "OUT_ECS":"/home/yangjc/summer_proj/github_test/Narrowed_ouput/number_ecs.txt",
+        "OUT_MAT":"/home/yangjc/summer_proj/github_test/Narrowed_ouput/out_mat.txt"
     }
 }
