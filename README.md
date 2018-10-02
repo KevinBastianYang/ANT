@@ -7,4 +7,7 @@ Getting started
 ----------
 
 ### Data source
-The data used for demonstration came from [here](https://www.ncbi.nlm.nih.gov/pubmed/29024657).
+The data used for demonstration came from [here](https://www.ncbi.nlm.nih.gov/pubmed/29024657), including 3381 selected cells.
+
+### File illustration
+
