@@ -1,4 +1,4 @@
 ANT(Alignment-Narrowed TCC-Matrix)
 =======
-<img width="150" height="150" src="https://github.com/KevinBastianYang/ANT/blob/master/Logo3.jpg"/>
+<div align=right><img width="75" height="50" src="https://github.com/KevinBastianYang/ANT/blob/master/Logo3.jpg"/><div/>
 
