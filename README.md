@@ -7,5 +7,5 @@ Getting started
 ----------
 
 
-# Data source
+### Data source
 The data used for demonstration came from [here](https://www.ncbi.nlm.nih.gov/pubmed/29024657).
