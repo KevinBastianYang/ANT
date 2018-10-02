@@ -1,4 +1,4 @@
 ANT(Alignment-Narrowed TCC-Matrix)
 =======
-![baidu](https://github.com/KevinBastianYang/ANT/blob/master/Logo3.jpg) 
+<img width="150" height="150" src="https://github.com/KevinBastianYang/ANT/blob/master/Logo3.jpg"/>
 
