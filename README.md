@@ -11,12 +11,9 @@ The data used for demonstration came from [here](https://www.ncbi.nlm.nih.gov/pu
 
 ### File illustration
 
-#### 1. Read Alignment
-align.json   alignment.py
+1. Read Alignment：   align.json   alignment.py
 
-#### 2. Alignment Narrowing
-ANT_path.json getParameterANT.py linkage.py preprocess.py ANT_process.py
+2. Alignment Narrowing：   ANT_path.json getParameterANT.py linkage.py preprocess.py ANT_process.py
 
-#### 3. Matrix Construction
-parallel.py
+3. Matrix Construction：   parallel.py
 
