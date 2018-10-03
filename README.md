@@ -16,7 +16,7 @@ The data used for demonstration came from [here](https://www.ncbi.nlm.nih.gov/pu
 
 ### Run
 The path to the raw data is located in align.json and ANT_path.json. If you get the raw data or modify the path to your own, you can simply run 
-"""
+```python
 python parallel.py
-"""
+```
 to start!
