@@ -14,3 +14,9 @@ The data used for demonstration came from [here](https://www.ncbi.nlm.nih.gov/pu
 2. Alignment Narrowing：   ANT_path.json getParameterANT.py linkage.py preprocess.py ANT_process.py
 3. Matrix Construction：   parallel.py
 
+### Run
+The path to the raw data is located in align.json and ANT_path.json. If you get the raw data or modify the path to your own, you can simply run 
+"""
+python parallel.py
+"""
+to start!
