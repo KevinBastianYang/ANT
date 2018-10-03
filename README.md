@@ -15,8 +15,10 @@ The data used for demonstration came from [here](https://www.ncbi.nlm.nih.gov/pu
 3. Matrix Construction：   parallel.py
 
 ### Run
-The path to the raw data is located in align.json and ANT_path.json. If you get the raw data or modify the path to your own, you can simply run 
+The path to the raw data is located in align.json and ANT_path.json. If you get the raw data or modify the path to your own, you can simply run the following command to get started!
 ```python
 python parallel.py
 ```
-to start!
+* Some parameters you need to input: 1. The alignment json file position 2. The ANT json file position 3.
+* The input of ANT: 1. The demultiplexed single-cell reads and umis (drop-seq protocol) 
+* The output of ANT: 1. Constructed TCC matrix for these cells 2. Equivalence classes and their numbers
