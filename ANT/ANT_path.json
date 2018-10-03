@@ -5,7 +5,7 @@
     "TRANS_ID":"/home/yangjc/summer_proj/stage4/neo_id.txt",
     "THREADS": 8,
     "OUTPUT_PATH":{
-        "OUT_ECS":"/home/yangjc/summer_proj/github_test/Narrowed_ouput/number_ecs.txt",
-        "OUT_MAT":"/home/yangjc/summer_proj/github_test/Narrowed_ouput/out_mat.txt"
+        "OUT_ECS":"/home/yangjc/summer_proj/github_test/Narrowed_ouput/number_ecs.tsv",
+        "OUT_MAT":"/home/yangjc/summer_proj/github_test/Narrowed_ouput/out_mat.tsv"
     }
 }
