@@ -17,6 +17,7 @@ Getting started
 
 #### Configuration
 The required parameters needed to run this step is in ```align.json``` file. The included parameters are:
+
 * NUM_THREADS: The parallel threads to run STAR
 * CELL_DIR: The path to the directory that contains the different demultiplexed cell files (*barcodes*.fastq.gz and *barcodes*.umi)
 * STAR: star: The binary exectuable file, genomeDir: The path to the genome index, outFileNamePrefix: The assigned STAR output path
@@ -30,11 +31,21 @@ python alignment.py -i /the/path/to/your/align.json
 ```
 Then the alignment results will be under your assigned STAR output path.
 
+### Alignment narrowing
 
+#### Configuration
+The required parameters needed to run this step is in ```ANT_path.json``` file. The included parameters are:
 
+* CELL_DIR: It should be consistent with the one in ```align.json```
+* STAR_OUT_PATH: It should be consistent with the STAR outFileNamePrefix parameter in ```align.json```
+* CELL_LIST: A list of reads and corresponding umis. The example one is ```new_umi_read_list.txt```
+* TRANS_ID: The reference transcripts and their ids
+* THREADS: The parallel threads run this step
+* OUTPUT_PATH: The output path of this step, OUT_ECS: contains the constructed equivalence classes and their ids, OUT_MAT: contains the constructed TCC matrix
 
+**Note:** TRANS_ID should be changed accordingly if the species is not mouse. One way to do this is to download the reference transcrptome and assign random ids to different transcripts.
 
-
+#### 
 
 
 ### Run
