@@ -10,8 +10,7 @@ Getting started
 ----------
 ### Work flow
 1. Genome Alignment using STAR
-2. Alignment Narrowing
-3. Matrix Construction
+2. Alignment Narrowing and Matrix Construction
 
 ### Genome alignment using STAR
 
@@ -45,14 +44,11 @@ The required parameters needed to run this step is in ```ANT_path.json``` file. 
 
 **Note:** TRANS_ID should be changed accordingly if the species is not mouse. One way to do this is to download the reference transcrptome and assign random ids to different transcripts.
 
-#### 
-
-
-### Run
-The path to the raw data is located in align.json and ANT_path.json. If you get the raw data or modify the path to your own, you can simply run the following command to get started!
-```python
-python parallel.py
+#### Narrowing and matrix construction
+The wrapper file is ```parallel.py```. To do this step, we just need to run the following command.
+```shell
+python parallel.py -i /the/path/to/your/ANT_path.json
 ```
-* Some parameters you need to input: 1. The alignment json file position 2. The ANT json file position 3.
-* The input of ANT: 1. The demultiplexed single-cell reads and umis (drop-seq protocol) 
-* The output of ANT: 1. Constructed TCC matrix for these cells 2. Equivalence classes and their numbers
+
+
+
