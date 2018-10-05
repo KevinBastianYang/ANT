@@ -49,6 +49,11 @@ The wrapper file is ```parallel.py```. To do this step, we just need to run the 
 ```shell
 python parallel.py -i /the/path/to/your/ANT_path.json
 ```
+Downstream
+----------
+The built TCC-matrix can be used in the downstream single-cell analysis, for example, cell type and stage identification.
 
-
-
+Acknowledgement
+----------
+1. Enormous thanks to Chelsea Ju and Guangyu Zhou for their endless support and helps. Thanks to Prof. Wei Wang in ScAi for giving me this precious opportunity.
+2. The alignment step is achieved with the help of STAR(Dobin, Alexander, et al.). Great thanks.
