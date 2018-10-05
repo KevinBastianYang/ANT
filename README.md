@@ -20,6 +20,7 @@ The required parameters needed to run this step is in ```align.json``` file. The
 * NUM_THREADS: The parallel threads to run STAR
 * CELL_DIR: The path to the directory that contains the different demultiplexed cell files (*barcodes*.fastq.gz and *barcodes*.umi)
 * STAR: star: The binary exectuable file, genomeDir: The path to the genome index, outFileNamePrefix: The assigned STAR output path
+
 **Note:** Because the test was used on mouse cells, the corresponding genome index has been generated. Other species should previously use STAR genomeindex building to generate their own genome index. An example script I use is ```index_build.sh```. More details can be found [here](https://github.com/alexdobin/STAR).
 
 #### STAR alignment
