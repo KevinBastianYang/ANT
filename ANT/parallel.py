@@ -3,26 +3,28 @@
 from multiprocessing.dummy import Pool as ThreadPool
 from ANT_process import alignment_narrow
 from linkage import get_linkage
-from getParameterANT import get_para
-import alignment
+from getParameterANT import process_para
+from functools import partial
+#import alignment
 
-def cal_Parallel(cells,threads = 8):
+def cal_Parallel(parameter,cells,threads = 8):
 
     pool = ThreadPool(threads)
-    all_cell_data = pool.map(alignment_narrow,cells)
+    func = partial(alignment_narrow,parameter)
+    all_cell_data = pool.map(func,cells)
     pool.close()
     pool.join()
     return all_cell_data
 
-def main():
-	parameterANT = get_para()
+def main(argv):
+	parameterANT = process_para(argv)
 	if not isinstance(parameterANT,int):
-		alignment.alignment_STAR()
+		#alignment.alignment_STAR()
 		threads = parameterANT["THREADS"]
 		file_ecs = open(parameterANT["OUTPUT_PATH"]["OUT_ECS"],'a')
 		file_output = open(parameterANT["OUTPUT_PATH"]["OUT_MAT"],'a')
-		cell_number, tran_dict = get_linkage()
-		cells_data = cal_Parallel(cell_number.keys(),threads)
+		cell_number, tran_dict = get_linkage(parameterANT)
+		cells_data = cal_Parallel(parameterANT,cell_number.keys(),threads)
 
 		ec_number = []
     	for data in cells_data:
@@ -48,6 +50,6 @@ def main():
     	file_output.close()
 
 if __name__ == '__main__':
-	main()
+	main(sys.argv[1:])
 
 #next: modify the output\shrink ANT-process\add check\remove unecessary repeat

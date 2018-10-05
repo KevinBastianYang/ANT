@@ -1,8 +1,5 @@
 #!/usr/bin/python
-from getParameterANT import get_para
-
-def get_linkage():
-	parameter = get_para()
+def get_linkage(parameter):
 
 	#cell_to_number: cell barcode and its number
 	cell_to_number = dict()

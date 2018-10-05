@@ -2,23 +2,36 @@
 
 import os
 import json
+import sys 
+import getopt
 
-def get_para():
+def process_para(arg):
 	try:
-		with open(input("The path of the ANT parameter json file"),'r') as json_f:
-			print("json file read in correctly")
-	except IOError as err:
-		return -1
-	else:
+		opts, args = getopt.getopt(arg,"i:")
+	except getopt.GetoptError:
+		print "Usage: python python_file -i your_parameter.json\n"
+		sys.exit(2)
+
+	for opt, ar in opts:
 		try:
-			para = json.load(json_f)
-		except ValueError as e:
-			print("json file content error")
-			return -2
-		else:
-			return para
-def main():
-	get_para()
+			with open(ar,'r') as json_file:
+				print "json file read in correctly\n"		
+		except IOError as err:
+    		print "File Error:"+str(err)+'\n'
+    		sys.exit(3)
+    	else:
+    		try:
+    			parameter = json.load(json_file)
+    		except ValueError as e:
+    			print "json file content error\n"
+    			sys.exit(4)
+    		else:
+    			return parameter
+
+def main(argv):
+	parameter = process_para(argv)
+	if not isinstance(parameter,int):
+		return parameter
 
 if __name__ == '__main__':
-	main()
+	main(sys.argv[1:])

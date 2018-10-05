@@ -3,29 +3,8 @@ import os
 import json
 import sys
 import getopt
+from getParameterANT import process_para
 
-def process_para_star(arg):
-	try:
-		opts, args = getopt.getopt(arg,"i:")
-	except getopt.GetoptError:
-		print "Usage: python alignment.py -i your_align_parameter.json\n"
-		sys.exit(2)
-
-	for opt, ar in opts:
-		try:
-			with open(ar,'r') as json_file:
-				print "json file read in correctly\n"		
-		except IOError as err:
-    		print "File Error:"+str(err)+'\n'
-    		sys.exit(3)
-    	else:
-    		try:
-    			parameter = json.load(json_file)
-    		except ValueError as e:
-    			print "json file content error\n"
-    			sys.exit(4)
-    		else:
-    			return parameter
 
 def alignment_STAR(parameter):
 	cell_dir = parameter["CELL_DIR"]
@@ -47,9 +26,8 @@ def alignment_STAR(parameter):
 
     print "STAR alignment finished\n"
 
-
 def main(argv):
-	parameter = process_para_star(argv)
+	parameter = process_para(argv)
 	if not isinstance(parameter,int):
 		alignment_STAR(parameter)
 
