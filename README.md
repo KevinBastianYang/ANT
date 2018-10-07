@@ -52,7 +52,10 @@ python parallel.py -i /the/path/to/your/ANT_path.json
 More about ANT
 -----------
 ### Algorithm ideas
-The following workflow shows the basic idea of ANT. 
+The following example shows the basic ideas of ANT. 
+
+#### Read Alignment using STAR
+* AAATTGGC is a [umi](https://en.wikipedia.org/wiki/Unique_molecular_identifier) from cell 1. There are 8 reads are labeled with this umi. These 8 reads are aligned to genome reference at first then was transformed to transcript coordinates. In this example, there are 4 types of alignment, in which seperate 2 reads are aligned to different transcript(s). 
 ![alt text](https://github.com/KevinBastianYang/ANT/blob/master/ANT/files/1.PNG)
 ![alt text](https://github.com/KevinBastianYang/ANT/blob/master/ANT/files/2.PNG)
 ![alt text](https://github.com/KevinBastianYang/ANT/blob/master/ANT/files/3.PNG)
