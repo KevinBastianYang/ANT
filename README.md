@@ -71,10 +71,7 @@ possible origins.
 
 #### Matrix construction
 * Put all the narrowed origins into the equivalence class(EC) and construct the TCC matrix.
-
 ![alt text](https://github.com/KevinBastianYang/ANT/blob/master/ANT/files/6.PNG)
-
-
 
 Downstream
 ----------
