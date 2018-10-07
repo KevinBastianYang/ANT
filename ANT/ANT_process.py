@@ -4,12 +4,12 @@ from linkage import get_linkage
 
 def alignment_narrow(parameter,cell_name):
 
-	bam_to_sam(parameter,cell_name)
-	trim_header = trim_head(parameter,cell_name)
- 	cell_number,tran_dict = get_linkage(parameter)
- 	read_umi_map = read_to_umi(parameter,cell_name)
+    bam_to_sam(parameter,cell_name)
+    trim_header = trim_head(parameter,cell_name)
+    cell_number,tran_dict = get_linkage(parameter)
+    read_umi_map = read_to_umi(parameter,cell_name)
 
- 	# extract the aligned reads
+    # extract the aligned reads
 
     rtotr = dict()
     for i, records in enumerate(trim_header):

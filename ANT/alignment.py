@@ -10,21 +10,17 @@ def alignment_STAR(parameter):
 	cell_dir = parameter["CELL_DIR"]
 	#mkdir for each output and then run STAR
 	star_outpath = parameter["outFileNamePrefix"]
-	os.sys("mkdir"+star_outpath)
+	os.system("mkdir"+star_outpath)
 	for file in os.listdir(cell_dir):
 		if os.path.splitext(file)[1] == ".gz":
 			mkdir_cmd = "mkdir "+star_outpath+"STAR_out_"+file[10:21]+"/"
-			os.sys(mkdir_cmd)
+			os.system(mkdir_cmd)
 
-			star_cmd = parameter["STAR"]["star"]+" --runThreadN "+parameter["NUM_THREADS"]
-						+" --genomeDir "+parameter["STAR"]["genomeDir"]
-						+" --readFileIn "+cell_dir+file +" --readFilesCommand zcat"
-						+" --genomeLoad LoadAndKeep"+" --quantMode TranscriptomeSAM GeneCounts"
-						+" --outFileNamePrefix "+star_outpath+"STAR_out_"+file[10:21]+"/"
-    		print("Running STAR alignment on cell "+file[10:21]+'\n')
-    		os.sys(star_cmd)
+			star_cmd = parameter["STAR"]["star"]+" --runThreadN "+parameter["NUM_THREADS"]+" --genomeDir "+parameter["STAR"]["genomeDir"]+" --readFileIn "+cell_dir+file +" --readFilesCommand zcat"+" --genomeLoad LoadAndKeep"+" --quantMode TranscriptomeSAM GeneCounts"+" --outFileNamePrefix "+star_outpath+"STAR_out_"+file[10:21]+"/"
+			print "Running STAR alignment on cell "+file[10:21]+'\n'
+			os.system(star_cmd)
 
-    print "STAR alignment finished\n"
+	print "STAR alignment finished\n"
 
 def main(argv):
 	parameter = process_para(argv)

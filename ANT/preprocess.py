@@ -8,13 +8,8 @@ from linkage import get_linkage
 
 def bam_to_sam(parameterANT,cell_name):
 	star_out_path = parameterANT["STAR_OUT_PATH"]
-	trans_cmd = "samtools view -h "+star_out_path
-		+"STAR_out_"+cell_name
-		+"/Aligned.toTranscriptome.out.bam > "
-		+star_out_path
-		+"STAR_out_"+cell_name
-		+"/TranscriptCoord.sam"
-	os.sys(trans_cmd)
+	trans_cmd = "samtools view -h "+star_out_path+"STAR_out_"+cell_name+"/Aligned.toTranscriptome.out.bam > "+star_out_path+"STAR_out_"+cell_name+"/TranscriptCoord.sam"
+	os.system(trans_cmd)
 	print "bam to sam for "+cell_name+" finished\n"
 
 def trim_head(parameterANT,cell_name):

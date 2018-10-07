@@ -17,16 +17,16 @@ def process_para(arg):
 			with open(ar,'r') as json_file:
 				print "json file read in correctly\n"		
 		except IOError as err:
-    		print "File Error:"+str(err)+'\n'
-    		sys.exit(3)
-    	else:
-    		try:
-    			parameter = json.load(json_file)
-    		except ValueError as e:
-    			print "json file content error\n"
-    			sys.exit(4)
-    		else:
-    			return parameter
+			print "File Error:"+str(err)+'\n'
+			sys.exit(3)
+		else:
+			try:
+				parameter = json.load(json_file)
+			except ValueError as e:
+				print "json file content error\n"
+				sys.exit(4)
+			else:
+				return parameter
 
 def main(argv):
 	parameter = process_para(argv)
