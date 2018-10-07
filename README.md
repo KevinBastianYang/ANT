@@ -49,6 +49,13 @@ The wrapper file is ```parallel.py```. To do this step, we just need to run the 
 ```shell
 python parallel.py -i /the/path/to/your/ANT_path.json
 ```
+### More about ANT
+
+#### Algorithm ideas
+The following workflow shows the basic idea of ANT. 
+
+
+
 Downstream
 ----------
 The built TCC-matrix can be used in the downstream single-cell analysis, for example, cell type and stage identification.
