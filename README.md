@@ -52,15 +52,26 @@ python parallel.py -i /the/path/to/your/ANT_path.json
 More about ANT
 -----------
 ### Algorithm ideas
-The following workflow shows the basic idea of ANT. 
+The following example shows the basic ideas of ANT. 
+
+#### Read alignment using STAR
+* AAATTGGC is a [umi](https://en.wikipedia.org/wiki/Unique_molecular_identifier) from cell 1. There are 8 reads are labeled with this umi. These 8 reads are aligned to genome reference at first then was transformed to transcript coordinates. In this example, there are 4 types of alignment, in which seperate 2 reads are aligned to different transcript(s). 
 ![alt text](https://github.com/KevinBastianYang/ANT/blob/master/ANT/files/1.PNG)
+
+#### Alignment narrowing
+* Step1: If there are commonly appeared transcripts in all these 4 types, they are the dreamed ones because they show the consistent evidence of molecule origin. However, in some cases there is none. Among the mixed transcripts, further steps are required to narrow the 
+possible origins.
 ![alt text](https://github.com/KevinBastianYang/ANT/blob/master/ANT/files/2.PNG)
+* Step2: Firstly try to find the alignment types(golden types) that have the minimum transcripts inside because less trancripts inside one type means more accurate these possible origins are. Type 1 is the answer in this example.
 ![alt text](https://github.com/KevinBastianYang/ANT/blob/master/ANT/files/3.PNG)
+* Step3: Since transcripts in golden types are more accurate, they should appear frequently in other types (be able to intersect with other types)if there is less technical errors. However, in this example, both type 3 and type 4 are not the case. In order to save the convincing possible origins, a further step is needed.
 ![alt text](https://github.com/KevinBastianYang/ANT/blob/master/ANT/files/4.PNG)
+* Step4: Leave aside the golden type(type 1), do step1 again to find the commonly appeared transcripts. If founded, these transcripts will be saved(transcript 2). Otherwise step2 will be further implemented and the iteration will continue until all the convincing possibilities are found.
 ![alt text](https://github.com/KevinBastianYang/ANT/blob/master/ANT/files/5.PNG)
+
+#### Matrix construction
+* Put all the narrowed origins into the equivalence class(EC) and construct the TCC matrix.
 ![alt text](https://github.com/KevinBastianYang/ANT/blob/master/ANT/files/6.PNG)
-
-
 
 Downstream
 ----------
