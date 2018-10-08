@@ -1,0 +1,1 @@
+1. STAR takes already built mouse genome index. I need to provide an interface for other genomes 
