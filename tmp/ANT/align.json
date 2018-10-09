@@ -1,9 +1,0 @@
-{
-    "NUM_THREADS": 8,
-    "CELL_DIR": "/home/yangjc/summer_proj/allcells/E31_TCC/",
-    "STAR":{
-        "star": "/home/yangjc/summer_proj/STAR-2.6.0c/bin/Linux_x86_64/STAR",
-        "genomeDir": "/home/yangjc/summer_proj/onecell_test/STAR_test/genomeindex",
-        "outFileNamePrefix" : "/home/yangjc/summer_proj/github_test/STAR_out_1/"
-    }
-}
