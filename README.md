@@ -49,6 +49,11 @@ The wrapper file is ```parallel.py```. To do this step, we just need to run the 
 ```shell
 python parallel.py -i /the/path/to/your/ANT_path.json
 ```
+### Results interpretation
+```out_mat.tsv``` is the matrix file, which consists of 3 columns, equivalence class number, cell number, and the numbers of umis(quantification).
+
+```number_ecs.tsv``` contains the constructed equivalence classes and their numbers. 
+
 More about ANT
 -----------
 ### Algorithm ideas
