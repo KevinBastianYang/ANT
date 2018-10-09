@@ -1,5 +1,7 @@
 #!/usr/bin/env python
-
+###Author:JCY
+###Usage: cal_Parallel() is multi-threads wrapper
+###       main() output the output results
 from multiprocessing.dummy import Pool as ThreadPool
 from ANT_process import alignment_narrow
 from linkage import get_linkage

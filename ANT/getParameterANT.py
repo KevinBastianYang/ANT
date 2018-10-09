@@ -1,5 +1,6 @@
 #!/usr/bin/env python
-
+###Author:JCY
+###Usage: process_para() is a function that processes the json read in file
 import os
 import json
 import sys 

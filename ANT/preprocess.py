@@ -1,5 +1,8 @@
 #!/usr/bin/env python
-
+###Author:JCY
+###Usage: bam_to_sam() is a function that transforms the bam file to sam file
+###       trim_head() is a function that extracts the useful information of sam file
+###       read_to_umi() is a function that links the reads and umis that come from the same cell
 import os
 import re
 import commands

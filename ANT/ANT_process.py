@@ -1,4 +1,7 @@
 #!/usr/bin/env python
+###Author:JCY
+###Usage: alignment_narrow() is a function that narrow the alignment results
+
 from preprocess import bam_to_sam,trim_head,read_to_umi
 from linkage import get_linkage
 
@@ -9,7 +12,7 @@ def alignment_narrow(parameter,cell_name):
     cell_number,tran_dict = get_linkage(parameter)
     read_umi_map = read_to_umi(parameter,cell_name)
 
-    # extract the aligned reads
+    # build the linkage between umis and reads, reads and transcripts
 
     rtotr = dict()
     for i, records in enumerate(trim_header):
@@ -20,8 +23,7 @@ def alignment_narrow(parameter,cell_name):
     for read in rtotr.keys():
         umi_r.setdefault(read_umi_map[read], []).append(read)
     
-
-     # dict: ec and its umis
+    # dict: ec and its umis
     finalset_umi = dict()
     cell_finalset = dict()
     for key, values in umi_r.items():
@@ -57,6 +59,7 @@ def alignment_narrow(parameter,cell_name):
 
         processed_reads.sort(key=len)        
 
+        #core
         if len(processed_reads):
             intersection = list(set(processed_reads[0]).intersection(*processed_reads[1:]))
             s_set = []
@@ -86,7 +89,7 @@ def alignment_narrow(parameter,cell_name):
                         intersection = list(set(l_set[0]).intersection(*l_set[1:]))
                         reads = l_set
 
-            ####bugging:
+            ####previous bugs
             output_set = list(set(output_set))
 
             output_set.sort()

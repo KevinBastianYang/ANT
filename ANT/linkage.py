@@ -1,4 +1,6 @@
 #!/usr/bin/env python
+###Author:JCY
+###Usage:get_linkage() is a function that provide 2 transition data, cell_to_number and tran_dict 
 def get_linkage(parameter):
 
 	#cell_to_number: cell barcode and its number

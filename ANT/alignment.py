@@ -1,4 +1,6 @@
 #!/usr/bin/env python
+###Author:JCY
+###Usage: alignment_STAR() is a function carrying out read alignment to genomen reference
 import os
 import json
 import sys
