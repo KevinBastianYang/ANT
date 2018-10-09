@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 
 from multiprocessing.dummy import Pool as ThreadPool
 from ANT_process import alignment_narrow
@@ -26,27 +26,35 @@ def main(argv):
 		file_output = open(parameterANT["OUTPUT_PATH"]["OUT_MAT"],'a')
 		cell_number, tran_dict = get_linkage(parameterANT)
 		cells_data = cal_Parallel(parameterANT,cell_number.keys(),threads)
-                print "asfkahsf\n"
+
+                print "Writing ecs and their numbers..."
 		ec_number = []
 		for data in cells_data:
 			for i in data.values():
 				ecs_umis = i
-			ec_number.append(ec for ec in ecs_umis.keys())
+                        for ec in ecs_umis.keys():
+                            ec_number.append(ec)
 		ec_number = list(set(ec_number))
+                
 
 		for i, ecs in enumerate(ec_number):
-			print ecs
-			file_ecs.write(str(i) + '\t' + ecs + '\n')
-
+			file_ecs.write("{0}\t".format(i))
+                        ecs = ecs.split(',')
+                        for ec in ecs:
+                            file_ecs.write("{0},".format(long(ec)))
+                        file_ecs.write('\n')
+                print "Finished writing"
+                print "Writing TCC matrix..."
 		for data in cells_data:
 			for k,v in data.items():
 				cell = k
 				set_umi = v
 			for ecs in set_umi.keys():
-				file_output.write("{0}\t{1}\t{2}\t".format(ec_number.index(ecs),cell,len(set_umi.values())))
-				for i in set_umi.values():
-					file_output.write(i+',')
+				file_output.write("{0}\t{1}\t{2}\t".format(ec_number.index(ecs),long(cell)-1,len(set_umi[ecs])))
+				#for i in set_umi[ecs]:
+					#file_output.write("{0},".format(i))
 				file_output.write('\n')
+                print "Finished writing"
 		file_ecs.close()
 		file_output.close()
 

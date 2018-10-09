@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 def get_linkage(parameter):
 
 	#cell_to_number: cell barcode and its number

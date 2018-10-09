@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 
 import os
 import json
@@ -18,7 +18,6 @@ def process_para(arg):
 
        		for opt, ar in opts:
        			try:
-       				print opt, ar
        				json_file = open(ar,'r')
 				print "json file read in correctly\n"		
        			except IOError as err:

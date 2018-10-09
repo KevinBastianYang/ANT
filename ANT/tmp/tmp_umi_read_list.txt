@@ -1,0 +1,1 @@
+cell_0001_TTGAGTAGAATC  /home/yangjc/summer_proj/github_test/ANT/ANT/tmp/cell_0001_TTGAGTAGAATC.umi       /home/yangjc/summer_proj/github_test/ANT/ANT/tmp/cell_0001_TTGAGTAGAATC.fastq.gz

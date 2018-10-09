@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 from preprocess import bam_to_sam,trim_head,read_to_umi
 from linkage import get_linkage
 
@@ -93,8 +93,6 @@ def alignment_narrow(parameter,cell_name):
 
             finalset_umi.setdefault(','.join(output_set), []).append(key)
             
-#            print file[-12:]+'\n'
-#            print cell_number[file[-12:]+'\n'
     cell_finalset[cell_number[cell_name]] = finalset_umi
-    print cell_number[cell_name]
+    print "cell "+ cell_name +" finished processing\n"
     return cell_finalset

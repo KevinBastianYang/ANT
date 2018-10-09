@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 
 import os
 import re
@@ -42,11 +42,4 @@ def read_to_umi(parameterANT,cell_name):
 	read_umi_map = dict()
 	for i in range(0,len(fastq_list)):
 		read_umi_map[fastq_list[i]] = umi_list[i]
-	print "read_umi_map\n"
 	return read_umi_map
-
-"""
-        with open(star_out_path+"STAR_out_"+cell_name+"/TranscriptCoord.sam",'r') as orig:
-                content = orig.read()
-                pattern = re.compile(r"^[^@]")
-                trim_header = pattern.findall(content)"""
