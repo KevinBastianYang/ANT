@@ -92,6 +92,7 @@ possible origins.
 ![alt text](https://github.com/KevinBastianYang/ANT/blob/master/ANT/files/9.PNG)
 #### Equivalence Class Counts per Cell
 * ANT has less unique equivalence classes per cell (Wilcoxon Signed Rank Test with p-value < 2.2e-16).
+![alt text](https://github.com/KevinBastianYang/ANT/blob/master/ANT/files/10.PNG)
 
 
 Downstream
