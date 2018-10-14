@@ -78,6 +78,22 @@ possible origins.
 * Put all the narrowed origins into the equivalence class(EC) and construct the TCC matrix.
 ![alt text](https://github.com/KevinBastianYang/ANT/blob/master/ANT/files/6.PNG)
 
+### Results comparison
+
+#### Read alignment ratio
+* ANT has a significantly higher read alignment ratio compared with Kallisto (Wilcoxon Signed Rank Test with p-value < 2.2e-16).
+![alt text](https://github.com/KevinBastianYang/ANT/blob/master/ANT/files/7.PNG)
+#### Molecule Annotation Ratio
+* ANT has more annotated molecules per cell compared with Kallisto (Wilcoxon Signed Rank Test with p-value < 2.2e-16).
+![alt text](https://github.com/KevinBastianYang/ANT/blob/master/ANT/files/8.PNG)
+#### Running Time
+* At cell level (10 random cells), the running time of ANT is shorter than Kallisto (8 parallel threads computing on the same server).
+* On all 3381 cells one by one, Kallisto took 12 hours 13 minutes, while ANT took 16 hours 02 minutes. 
+![alt text](https://github.com/KevinBastianYang/ANT/blob/master/ANT/files/9.PNG)
+#### Equivalence Class Counts per Cell
+* ANT has less unique equivalence classes per cell (Wilcoxon Signed Rank Test with p-value < 2.2e-16).
+
+
 Downstream
 ----------
 The built TCC-matrix can be used in the downstream single-cell analysis, for example, cell type and stage identification.
